@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #faa500;
+  --mid-light-orange: #f4be48;
+  --light-orange: #f9d78d;
+  --lighter-orange: #fbefcf;
+  --tagline-orange: #FFC96C;
+  --nunito: "Nunito", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 100dvh;
+}
+
+button {
+  cursor: pointer;
+}
+
+.restaurantLogo {
+  height: clamp(70px, 10vw, 75px);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0 1rem 0;
+  font-family: var(--nunito);
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: 0;
+  padding: 3px 10px;
+  color: var(--orange);
+  font-family: var(--nunito);
+  font-size: clamp(15px, 2vw, 16px);
+  font-weight: bolder;
+}
+
+main{
+    height: 100%;
+    background-color: violet;
+}
+
+.firstSection{
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 clamp(1rem, 2vw, 4rem);
+    height: clamp(250px, 25vw, 800px);
+    font-size: clamp(30px, 8vw, 60px);
+    font-family: var(--nunito);
+    -webkit-text-stroke: 1px white;
+    color: var(--tagline-orange);
+    background-image: url(images/fast-food.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.8);
+}
+
+.firstSection h1{
+    position: absolute;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
