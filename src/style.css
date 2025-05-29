@@ -13,6 +13,7 @@
   --lighter-orange: #fbefcf;
   --tagline-orange: #FFC96C;
   --nunito: "Nunito", sans-serif;
+  --box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 body {
@@ -34,7 +35,9 @@ header {
   align-items: center;
   gap: 1rem;
   padding: 1rem 0 1rem 0;
+  background-color: #fffff1;
   font-family: var(--nunito);
+  box-shadow: var(--box-shadow);
 }
 
 .buttons {
@@ -53,34 +56,65 @@ header {
 }
 
 main{
+    display: flex;
     height: 100%;
-    background-color: violet;
+    background-color: var(--light-orange);
 }
 
-.firstSection{
+.firstSection {
     display: flex;
     align-items: center;
-    padding: 0 0 0 clamp(1rem, 2vw, 4rem);
-    height: clamp(250px, 25vw, 800px);
-    font-size: clamp(30px, 8vw, 60px);
-    font-family: var(--nunito);
-    -webkit-text-stroke: 1px white;
-    color: var(--tagline-orange);
-    background-image: url(images/fast-food.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.8);
+    justify-content: space-around;
+    height: clamp(300px, 30vw, 800px);
+    width: 100%;
+    padding: 4rem;
 }
 
-.firstSection h1{
-    position: absolute;
-    z-index: 1000;
+.taglineContainer {
+    font-family: var(--nunito);
+    padding: 0 clamp(5rem, 2vw, 4rem)  0 (5rem, 2vw, 4rem);
+    
+}
+
+.taglineContainer h1{
+    font-size: clamp(35px, 5.5vw, 115px);
+    color: transparent;
+    -webkit-text-stroke: 2px var(--orange);
+}
+
+.taglineContainer p{
+    font-size: clamp(12px, 5vw, 20px);
+}
+
+.fastFoodImageContainer{
+    padding: 4rem;
+}
+
+.fastFoodImage{
+    width: clamp(250px, 21.5vw, 500px);
 }
 
 @media screen and (max-width: 992px) {
   header {
     flex-direction: column;
     align-items: center;
+  }
+
+  main{
+    justify-content: center;
+  }
+
+  .firstSection{
+    padding: 0;
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+
+  .taglineContainer {
+    padding: 1rem;
+  }
+
+  .fastFoodImageContainer{
+    padding: 2rem 0 0 0;
   }
 }
