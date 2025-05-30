@@ -25,7 +25,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-family: var(--poppins);
-  animation: 1s fadeIn ease-in-out;
+  animation: 1.5s fadeIn ease-in-out;
 }
 
 body::before {

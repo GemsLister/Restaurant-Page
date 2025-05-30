@@ -1,0 +1,28 @@
+body {
+  animation: 1.5s fadeIn ease-in-out;
+}
+
+.menu-section {
+    background: rgba(0, 0, 0, 0.425);
+    
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}
