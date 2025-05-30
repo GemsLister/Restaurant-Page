@@ -1,5 +1,5 @@
 import './style.css'
-import { mainElement } from './main';
+import { homeCaption } from './home.js';
 
 const contentDiv = document.querySelector('#content');
-contentDiv.appendChild(mainElement);
+contentDiv.appendChild(homeCaption());
