@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -12,13 +12,29 @@
   --light-orange: #f9d78d;
   --lighter-orange: #fbefcf;
   --tagline-orange: #FFC96C;
-  --nunito: "Nunito", sans-serif;
-  --box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --poppins: "Poppins", sans-serif;
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 body {
   display: grid;
-  grid-template-rows: 1fr 100dvh;
+  grid-template-rows: auto 1fr;
+  height: 100dvh;
+  background-image: url('images/boodle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--poppins);
+  animation: 1s fadeIn ease-in-out;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.425);
+  pointer-events: none;
 }
 
 button {
@@ -26,72 +42,86 @@ button {
 }
 
 .restaurantLogo {
-  height: clamp(70px, 10vw, 75px);
+  height: clamp(70px, 10vw, 90px);
 }
 
 header {
+  grid-row: 1;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  position: relative;
+  padding: 1.5rem 0 0 0;
   gap: 1rem;
-  padding: 1rem 0 1rem 0;
-  background-color: #fffff1;
-  font-family: var(--nunito);
-  box-shadow: var(--box-shadow);
+  font-family: var(--poppins);;
 }
 
 .buttons {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
 .buttons button {
   background-color: transparent;
-  border: 0;
-  padding: 3px 10px;
+  border: 2px solid white;
+  padding: 1px;
+  height: clamp(20px, 20vw, 40px);
+  width: clamp(60px, 25vw, 100px);
+  border-radius: 16px;
+  color: white;
+  font-family: var(--poppins);
+  font-size: clamp(12px, 3vw, 14px);
+  font-weight: 500;
+}
+
+.buttons button:hover {
+  background-color: white;
   color: var(--orange);
-  font-family: var(--nunito);
-  font-size: clamp(15px, 2vw, 16px);
-  font-weight: bolder;
+  transition: 0.3s ease-in-out;
 }
 
-main{
-    display: flex;
-    height: 100%;
-    background-color: var(--light-orange);
+#content {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.firstSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: clamp(300px, 30vw, 800px);
-    width: 100%;
-    padding: 4rem;
+figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 1000;
+  width: clamp(10rem, 80vw, 100rem);
+  gap: 1rem;
 }
 
-.taglineContainer {
-    font-family: var(--nunito);
-    padding: 0 clamp(5rem, 2vw, 4rem)  0 (5rem, 2vw, 4rem);
-    
+figcaption h1 {
+  font-size: clamp(48px, 6.2vw, 6.5rem);
+  font-weight: 800;  
+  color: white;
 }
 
-.taglineContainer h1{
-    font-size: clamp(35px, 5.5vw, 115px);
-    color: transparent;
-    -webkit-text-stroke: 2px var(--orange);
+figcaption p{
+  font-size: clamp(14px, 1.4vw, 1.25rem);
 }
 
-.taglineContainer p{
-    font-size: clamp(12px, 5vw, 20px);
+.boodle-figure img {
+  width: clamp(320px, 60vw, 1000px);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
 }
 
-.fastFoodImageContainer{
-    padding: 4rem;
-}
-
-.fastFoodImage{
-    width: clamp(250px, 21.5vw, 500px);
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -100,21 +130,7 @@ main{
     align-items: center;
   }
 
-  main{
-    justify-content: center;
-  }
-
-  .firstSection{
-    padding: 0;
+  figcaption {
     text-align: center;
-    flex-direction: column-reverse;
-  }
-
-  .taglineContainer {
-    padding: 1rem;
-  }
-
-  .fastFoodImageContainer{
-    padding: 2rem 0 0 0;
   }
 }
