@@ -1,4 +1,3 @@
-import './home-style.css'
 import { homeCaption } from './home.js';
 import { menuFunction } from './menu.js';
 
