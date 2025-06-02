@@ -8,6 +8,7 @@ import chef6 from './images/chef6.png';
 
 export const aboutFunction = () => {
     const contentDiv = document.querySelector('#content');
+    contentDiv.innerHTML = "";
     const chefArray = [
         {
             name: 'Eric Aguinaldo',
@@ -56,11 +57,6 @@ export const aboutFunction = () => {
 
     const aboutSection = document.createElement('section');
     aboutSection.classList.add('about-section');
-    // aboutSection.style.cssText = `
-    //     background-color: #fffff1;
-    //     width: 100%;
-    //     z-index: 1000
-    // `;
     
     const aboutContent = document.createElement('div');
     aboutContent.classList.add('about-content');
