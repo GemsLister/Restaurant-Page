@@ -1,6 +1,9 @@
 import { homeFunction } from './home.js';
 import { menuFunction } from './menu.js';
 import { aboutFunction } from './about.js';
+import logo from './images/restaurant-logo.png';
+
+document.querySelector('.restaurantLogo').src = logo;
 
 const contentDiv = document.querySelector('#content');
 contentDiv.appendChild(homeFunction());
