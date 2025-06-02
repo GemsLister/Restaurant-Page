@@ -1,7 +1,7 @@
 import "./home-style.css";
 
 
-export const homeCaption = () => {
+export const homeFunction = () => {
     // deactivate menu button and about button
     const deactivateBtn = [];
     const deactivateMenuBtn = document.querySelector('#menuBtn');

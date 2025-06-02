@@ -8,10 +8,12 @@
 
 :root {
   --orange: #faa500;
+  --darker-orange: #ffb92d;
   --mid-light-orange: #f4be48;
   --light-orange: #f9d78d;
   --lighter-orange: #fbefcf;
   --tagline-orange: #FFC96C;
+  --paragraph: #181818;
   --poppins: "Poppins", sans-serif;
   --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

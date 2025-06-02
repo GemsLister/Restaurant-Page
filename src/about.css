@@ -1,0 +1,61 @@
+.about-header {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+    font-size: clamp(2rem, 2vw, 2.5rem);
+    color: var(--darker-orange);
+}
+
+.about-body {
+    padding: 2rem 0;
+}
+
+.aling-nena-card {
+    width: clamp(100px, 90vw, 45rem);
+    padding: 2rem 2rem 0 2rem;
+}
+
+.aling-nena-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+    width: 100%;
+    padding: 0 0 3rem 0;
+}
+
+.aling-nena-card img {
+    border-radius: 13px;
+    box-shadow: var(--box-shadow);
+    width: clamp(155px, 20vw, 300px);
+}
+
+.aling-nena-description,
+.chef-card p{
+    font-size: clamp(12px, 1.4vw, 1rem);
+}
+
+.chef-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.chef-card p {
+    text-align: center;
+}
+
+.chef-image {
+    border-radius: 13px;
+    box-shadow: var(--box-shadow);
+    width: clamp(120px, 20vw, 200px);
+}
+
+footer {
+    font-size: clamp(12px, 1.4vw, 1rem);
+    text-align: center;
+    padding: 2rem 0;
+}
