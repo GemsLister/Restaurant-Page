@@ -34,4 +34,9 @@ module.exports = {
       },
     ],
   },
+  output: {
+    path: path.resolve(__dirname, 'docs'), // or 'dist' if you set GitHub Pages to use /dist
+    filename: 'main.js',
+    clean: true,
+  }
 };
